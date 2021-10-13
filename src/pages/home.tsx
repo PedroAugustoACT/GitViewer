@@ -1,6 +1,6 @@
 import React from 'react';
-import {View, Text, StyleSheet, Touchable, Image, ButtonProps, Button} from 'react-native';
-import {ScrollView, TextInput, TouchableOpacity} from 'react-native-gesture-handler';
+import {View, Text, StyleSheet, Touchable, Image, ButtonProps, Button, TouchableOpacity} from 'react-native';
+import {ScrollView, TextInput} from 'react-native-gesture-handler';
 import {Feather} from '@expo/vector-icons'
 import { baseProps } from 'react-native-gesture-handler/lib/typescript/handlers/gestureHandlers';
 

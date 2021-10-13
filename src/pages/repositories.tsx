@@ -1,6 +1,6 @@
 import React from 'react';
-import {View, Text, StyleSheet, Touchable, Image, ButtonProps, Button} from 'react-native';
-import {ScrollView, TextInput, TouchableOpacity} from 'react-native-gesture-handler';
+import {View, Text, StyleSheet, Touchable, Image, ButtonProps, Button,  TouchableOpacity} from 'react-native';
+import {ScrollView, TextInput} from 'react-native-gesture-handler';
 import {Feather} from '@expo/vector-icons'
 
 
@@ -38,7 +38,7 @@ import {Feather} from '@expo/vector-icons'
             backgroundColor: 'transparent',
             height:'100%',
             display: 'flex',
-            justifyContent: 'center',
+            //justifyContent: 'center',
             
         },
         repBackground:{
@@ -47,11 +47,10 @@ import {Feather} from '@expo/vector-icons'
             justifyContent: 'center',
             backgroundColor: 'transparent',
             paddingHorizontal: 15,
-            height: '100%'
             
         },
         repBox:{
-            width: '75%',
+            width: '85%',
             borderRadius: 40,
             backgroundColor: '#FFF',
             height: '40%',
@@ -76,7 +75,7 @@ import {Feather} from '@expo/vector-icons'
         repLink:{
             fontFamily: 'Montserrat_500Medium',
             fontSize: 17,
-            top: 20
+            top: 20,
             
         },
 
