@@ -18,7 +18,6 @@ const homeInfo = (props : any) =>
                 <View style={styles.inputArea}>
                     <TextInput
                     placeholder='Type user'
-                    style={styles.input}
                     />
                     <TouchableOpacity>
                       <Feather name="search" size={24} color='black'/>  

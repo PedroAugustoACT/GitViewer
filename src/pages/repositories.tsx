@@ -14,8 +14,8 @@ import {Feather} from '@expo/vector-icons'
                         <Text style={styles.repName}>Organizador_Financas</Text>
                         <Text style={styles.repPublic}>Public</Text>
                         <TouchableOpacity>
-                            <Text style = {styles.repLink}>Link</Text>
-                        </TouchableOpacity>
+                            <Text style ={styles.repLink}>Link</Text>
+                        </TouchableOpacity>    
                     </View>
                     
                 </View>
@@ -47,12 +47,12 @@ import {Feather} from '@expo/vector-icons'
             justifyContent: 'center',
             backgroundColor: 'transparent',
             paddingHorizontal: 15,
+            height: '100%'
             
         },
-        
         repBox:{
-            width: '70%',
-            borderRadius: 4,
+            width: '75%',
+            borderRadius: 40,
             backgroundColor: '#FFF',
             height: '40%',
             display: 'flex',
@@ -71,10 +71,12 @@ import {Feather} from '@expo/vector-icons'
             fontFamily: 'Montserrat_400Regular',
             fontSize: 10,
             position: 'absolute',
-            top: 45,
+            top: 40,
         },
         repLink:{
             fontFamily: 'Montserrat_500Medium',
+            fontSize: 17,
+            top: 20
             
         },
 
