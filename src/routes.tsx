@@ -5,7 +5,7 @@ import {Feather} from '@expo/vector-icons';
 import {TouchableOpacity, Image} from 'react-native'
 
 //  NA LINHA 18, O PARAMETRO CERTO É HOME, TROQUEI PARA FACILITAR A REALIZAÇÃO DA PAG REPOSITORIES
-//import homeInfo from './pages/home'; 
+import homeInfo from './pages/home'; 
 import Repositories from './pages/repositories';
 
 const Stack = createStackNavigator();
@@ -15,7 +15,7 @@ function Routes(){
         <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen name= 'home'
-                 component={Repositories}
+                 component={homeInfo}
                   options={{
                         title: "GitViewer",
                         headerTitleAlign: 'center',
