@@ -4,6 +4,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 
 import Home from './pages/home/home';
+import repositories from "./pages/repositories/repositories";
 
 const Stack = createStackNavigator();
 
@@ -12,7 +13,7 @@ function Routes(){
         <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen name= 'home'
-                 component={Home}
+                 component={repositories}
                   options={{
                         title: "GitViewer",
                         headerTitleAlign: 'center',
