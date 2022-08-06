@@ -1,11 +1,15 @@
 import { StyleSheet } from 'react-native';
-import { flingGestureHandlerProps } from 'react-native-gesture-handler/lib/typescript/handlers/FlingGestureHandler';
 
 export const styles = StyleSheet.create({
 
+   scroll:{
+        flex: 1,
+   },
     mainBackground:{
         backgroundColor: 'transparent',
-        height:'100%',
+        //height:'100%',
+        marginTop: 10,
+        flex: 1,
         //justifyContent: 'center',
         
     },
@@ -20,20 +24,19 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 15,
         height:'100%',
         display: 'flex',
-        alignItems: 'center'
+        alignItems: 'center',
         
     },
     repBox:{
-        width: '85%',
+        width: '80%',
         borderRadius: 40,
         backgroundColor: '#FFF',
-        height: '20%',
+        height: '18%',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection:"column",
-        marginBottom: 19
-       
+        marginBottom: 19,
     },
     repName:{
         fontFamily: 'Montserrat_700Bold',
@@ -47,11 +50,25 @@ export const styles = StyleSheet.create({
         position: 'absolute',
         top: 40,
     },
+    containerDetails:{
+        display: 'flex',
+        alignItems: 'center',
+        flexDirection:"row",
+    },
+    boxDetails:{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        top: 15,
+        width: '40%',
+    },
+    textDetails:{
+        fontSize: 10,
+    },
     repLink:{
         fontFamily: 'Montserrat_500Medium',
-        fontSize: 17,
+        fontSize: 15,
         top: 20,
-        
     },
 
 

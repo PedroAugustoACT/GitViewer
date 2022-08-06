@@ -12,7 +12,17 @@ function Routes(){
     return(
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name= 'home'
+                <Stack.Screen name= 'Home'
+                 component={Home}
+                  options={{
+                        title: "GitViewer",
+                        headerTitleAlign: 'center',
+                        headerTitleStyle:{
+                        fontFamily: 'Montserrat_700Bold'
+                      },
+                  }}
+                   />
+                <Stack.Screen name= 'Repositories'
                  component={Repositories}
                   options={{
                         title: "GitViewer",

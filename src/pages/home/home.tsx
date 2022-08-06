@@ -2,16 +2,15 @@ import React, { useEffect, useState } from "react";
 import {View, Text, StyleSheet, Touchable, Image, ButtonProps, Button, TouchableOpacity, Alert} from 'react-native';
 import {ScrollView, TextInput} from 'react-native-gesture-handler';
 import {Feather} from '@expo/vector-icons'
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+
 import { styles } from './styles';
 
-import Repositories from "../repositories/repositories";
 
 const initialValues = {
    username: '', img: '', description:'', following:'', followers:'', reps:'',
 };
 
-function Home () {
+function Home ({ navigation }) {
 
   const [ user, setUser] = useState(initialValues)
 
@@ -39,6 +38,10 @@ function Home () {
         })
       }      
 
+      function handleSaveUser(){
+        const dataUser = user.username
+        console.log
+      }
     return (
         
         <View style={styles.container}>
@@ -82,7 +85,7 @@ function Home () {
               </View>
             </View>
             <View style= {styles.boxButton}>
-              <TouchableOpacity style={styles.buttonRep} onPress={Repositories}>
+              <TouchableOpacity style={styles.buttonRep} onPress={() => navigation.navigate('Repositories')}>
                 <Text style = {styles.textButton}>Repositories</Text> 
                 <Feather name="arrow-right" size={22} color='#778899' />  
               </TouchableOpacity> 

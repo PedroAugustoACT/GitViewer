@@ -10,7 +10,7 @@ import axios from 'axios';
 import { IRepList } from './IRepList';
 
 
-export default function Repositories(){
+export default function Repositories({ navigation }){
 
 
     const [ reps, setReps] = useState<IRepList[]>([])
@@ -28,30 +28,38 @@ export default function Repositories(){
 
 
         return(
-            <ScrollView style={styles.mainBackground}>
 
-                <View style={styles.buttonContainer}>
-                        <TouchableOpacity>
-                            <Feather name='arrow-left' size={25}/>
-                        </TouchableOpacity>
-                </View>
+            <View style={styles.scroll}>
+                <ScrollView style={styles.mainBackground}>
 
-                <View style={styles.repBackground}>
+                    <View style={styles.repBackground}>
 
-                    {
-                        reps.map((data) =>
-                            <View style={styles.repBox}>
-                                <Text style={styles.repName}>{data.name}</Text>
-                                <Text style={styles.repPublic}>Public</Text>
-                                <TouchableOpacity>
-                                    <Text style ={styles.repLink} onPress={() => { Linking.openURL(data.html_url); }} >See on git</Text>
-                                </TouchableOpacity>    
-                            </View>
-                        )
+                        {
+                            reps.map((data) =>
+                                <View style={styles.repBox}>
+                                    <Text style={styles.repName}>{data.name}</Text>
+                                    <Text style={styles.repPublic}>Public</Text>
+                                    <View style={styles.containerDetails}>
+                                        <View style={styles.boxDetails}> 
+                                            <Text style={styles.textDetails}>Language</Text>
+                                            <Text style={styles.textDetails}>{data.language}</Text>
+                                        </View>
+                                        <View style={styles.boxDetails}> 
+                                        <Feather name='star' size={13}/>
+                                            <Text style={styles.textDetails}>{data.stargazers_count}</Text>
+                                        </View>
+                                    </View>
+                                    <TouchableOpacity>
+                                        <Text style ={styles.repLink} onPress={() => { Linking.openURL(data.html_url); }} >See on git</Text>
+                                    </TouchableOpacity>    
+                                </View>
+                            )
 
-                    }
-                    
-                </View>
-            </ScrollView>
+                        }
+                        
+                    </View>
+                </ScrollView>
+
+            </View>
         )
     }
