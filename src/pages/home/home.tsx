@@ -2,19 +2,30 @@ import React, { useEffect, useState } from "react";
 import {View, Text, StyleSheet, Touchable, Image, ButtonProps, Button, TouchableOpacity, Alert} from 'react-native';
 import {ScrollView, TextInput} from 'react-native-gesture-handler';
 import {Feather} from '@expo/vector-icons'
+import { useNavigation } from '@react-navigation/native'
 
 import { styles } from './styles';
+
+type StackPramList = {
+  Home: undefined,
+  Repositories: undefined,
+}
+
 
 
 const initialValues = {
    username: '', img: '', description:'', following:'', followers:'', reps:'',
 };
 
-function Home ({ navigation }) {
+function Home () {
 
   const [ user, setUser] = useState(initialValues)
 
- 
+  const navigation = useNavigation()
+  
+  function openScreen(){
+    navigation.navigate('Repositories')
+  }
 
   function getUser(){
     
@@ -29,7 +40,6 @@ function Home ({ navigation }) {
             followers: json.followers,
             reps:json.public_repos,
           };
-
           setUser(userProfile);
         })
         .catch(() => {
@@ -38,10 +48,6 @@ function Home ({ navigation }) {
         })
       }      
 
-      function handleSaveUser(){
-        const dataUser = user.username
-        console.log
-      }
     return (
         
         <View style={styles.container}>
@@ -85,7 +91,7 @@ function Home ({ navigation }) {
               </View>
             </View>
             <View style= {styles.boxButton}>
-              <TouchableOpacity style={styles.buttonRep} onPress={() => navigation.navigate('Repositories')}>
+              <TouchableOpacity style={styles.buttonRep} onPress={openScreen}>
                 <Text style = {styles.textButton}>Repositories</Text> 
                 <Feather name="arrow-right" size={22} color='#778899' />  
               </TouchableOpacity> 

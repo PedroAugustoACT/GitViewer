@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import {useFonts, Montserrat_400Regular, Montserrat_500Medium, Montserrat_700Bold } from "@expo-google-fonts/montserrat";
 import AppLoading from 'expo-app-loading';
 
-import Routes from "./src/routes";
+import { Routes } from "./src/routes";
 
 export default function App() {
   let [fontsloaded] = useFonts ({

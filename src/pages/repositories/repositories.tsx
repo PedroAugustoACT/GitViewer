@@ -10,7 +10,7 @@ import axios from 'axios';
 import { IRepList } from './IRepList';
 
 
-export default function Repositories({ navigation }){
+export default function Repositories(){
 
 
     const [ reps, setReps] = useState<IRepList[]>([])
