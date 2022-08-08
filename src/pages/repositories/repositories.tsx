@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {View, Text, TouchableOpacity, Linking } from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import {Feather} from '@expo/vector-icons'
+import { useRoute } from '@react-navigation/native';
 
 import { styles } from './styles';
 
@@ -9,14 +10,20 @@ import axios from 'axios';
 
 import { IRepList } from './IRepList';
 
+type ParamsProps = {
+    username: string,
+}
+
 
 export default function Repositories(){
 
+    const route = useRoute()
+    const { username } = route.params as ParamsProps
 
     const [ reps, setReps] = useState<IRepList[]>([])
 
     useEffect(() => {
-        axios.get("https://api.github.com/users/PedroAugustoACT/repos")
+        axios.get(`https://api.github.com/users/${username}/repos`)
         .then((response)=>{
         setReps(response.data)
           //console.log(response.data)

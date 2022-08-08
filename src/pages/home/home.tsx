@@ -22,9 +22,9 @@ function Home () {
   const [ user, setUser] = useState(initialValues)
 
   const navigation = useNavigation()
-  
+
   function openScreen(){
-    navigation.navigate('Repositories')
+    navigation.navigate('Repositories', {username: user.username})
   }
 
   function getUser(){
