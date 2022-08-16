@@ -4,6 +4,7 @@
 
 ### Tecnologias usadas
 - ReactNative
+- TypeScript
 - CSS
 - Expo
 - Axios
