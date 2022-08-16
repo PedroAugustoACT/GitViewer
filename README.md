@@ -8,3 +8,4 @@
 - CSS
 - Expo
 - Axios
+- React Navigation
