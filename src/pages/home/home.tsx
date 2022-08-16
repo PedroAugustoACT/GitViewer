@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import {View, Text, StyleSheet, Touchable, Image, ButtonProps, Button, TouchableOpacity, Alert} from 'react-native';
-import {ScrollView, TextInput} from 'react-native-gesture-handler';
+import {View, Text, Image, TouchableOpacity, Alert} from 'react-native';
+import { TextInput} from 'react-native-gesture-handler';
 import {Feather} from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native'
 
@@ -21,6 +21,8 @@ function Home () {
 
   const [ user, setUser] = useState(initialValues)
 
+  const [isTyping, setIsTyping] = useState(false);
+
   const navigation = useNavigation()
 
   function openScreen(){
@@ -28,10 +30,12 @@ function Home () {
   }
 
   function getUser(){
+
+    setIsTyping(true)
     
     fetch(`https://api.github.com/users/${user.username}`)
     .then(response => response.json())
-        .then( json => {
+    .then( json => {
           const userProfile = {
             username: json.login,
             img: json.avatar_url,
@@ -46,8 +50,8 @@ function Home () {
           Alert.alert('Error', 'Could not load user data');
           
         })
-      }      
-
+      }    
+      
     return (
         
         <View style={styles.container}>
@@ -69,7 +73,10 @@ function Home () {
                 <Image style={styles.userImage}
                   source={{uri: user.img}}
                 />
-                <Text style={styles.username}>{user.username}</Text>
+                {
+                  isTyping ? <Text style={styles.username}>{user.username}</Text> : null
+                  
+                }
                 <Text style={styles.userDescription}>{user.description}</Text>
 
                 <View style={styles.intireBox}>  

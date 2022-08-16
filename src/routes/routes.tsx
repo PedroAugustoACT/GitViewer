@@ -38,21 +38,3 @@ export function StackRoutes(){
         </Navigator>
     )
 }
-{/* <Stack.Screen name= 'Home'
- component={Home}
-  options={{
-        title: "GitViewer",
-        headerTitleAlign: 'center',
-        headerTitleStyle:{
-        fontFamily: 'Montserrat_700Bold'
-      },
-  }}
-   />
-<Stack.Screen name= 'Repositories'
- component={Repositories}
-  options={{
-        title: "GitViewer",
-        headerTitleAlign: 'center',
-        headerTitleStyle:{
-        fontFamily: 'Montserrat_700Bold'
-      }, */}
