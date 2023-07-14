@@ -143,5 +143,10 @@ export const styles = StyleSheet.create({
         fontFamily: 'Montserrat_400Regular',
         fontSize: 12,
       },
+      loadingContainer: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+      },
       
 })
