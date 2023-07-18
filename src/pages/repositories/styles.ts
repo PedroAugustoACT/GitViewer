@@ -71,7 +71,8 @@ export const styles = StyleSheet.create({
         top: 20,
     },
     loadingContainer:{
-        marginTop:270
+        position: 'absolute',
+        marginTop: 300
     },
     loadingIndicator:{
         flex: 1,
