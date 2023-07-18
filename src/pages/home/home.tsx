@@ -75,7 +75,7 @@ function Home() {
           </View>
         </View>
         {isName === undefined ? (
-          <Text style={styles.txtError}>Digite um usuário válido</Text>
+          <Text style={styles.txtError}>Digite um usuário existente</Text>
         ) : (
           <></>
         )}
