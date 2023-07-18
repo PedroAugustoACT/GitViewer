@@ -3,10 +3,10 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'transparent',
-        height:'100%',
-        display: 'flex',
+      flexGrow: 1,
+      backgroundColor: 'transparent',
     },
+  
     header:{
         paddingHorizontal: 15,
         flexDirection: 'row',
@@ -31,6 +31,13 @@ export const styles = StyleSheet.create({
         borderRadius: 10,
         
       },
+      txtError:{
+        fontFamily: "Montserrat_400Regular",
+        color: 'red',
+        fontSize: 12,
+        marginTop: 2,
+        textAlign:'center',
+      },
 
       input:{
         fontFamily: "Montserrat_500Medium",
@@ -49,6 +56,7 @@ export const styles = StyleSheet.create({
         backgroundColor: '#778899',
         paddingHorizontal: 20,
         padding: 15,
+        marginTop: 40,
         borderRadius: 10,
         width: '80%',
         height: 400,
@@ -122,14 +130,24 @@ export const styles = StyleSheet.create({
         color: '#778899',
         fontFamily: 'Montserrat_500Medium',
       },
-      footer:{
-        display: "flex",
+      footer: {
+        position: 'absolute',
+        bottom: 20,
+        left: 0,
+        right: 0,
+        display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
       },
-      footerText:{
+      
+      footerText: {
         fontFamily: 'Montserrat_400Regular',
         fontSize: 12,
-        top: 120,
       },
+      loadingContainer: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+      },
+      
 })

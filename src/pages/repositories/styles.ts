@@ -28,7 +28,7 @@ export const styles = StyleSheet.create({
         
     },
     repBox:{
-        width: '80%',
+        width: '100%',
         borderRadius: 40,
         backgroundColor: '#FFF',
         height: 150,
@@ -70,6 +70,17 @@ export const styles = StyleSheet.create({
         fontSize: 15,
         top: 20,
     },
+    loadingContainer:{
+        position: 'absolute',
+        marginTop: 300
+    },
+    loadingIndicator:{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+
+    }
+    
 
 
 });
