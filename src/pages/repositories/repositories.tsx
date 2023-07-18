@@ -7,7 +7,6 @@ import {
   FlatList,
   ActivityIndicator,
 } from "react-native";
-import { ScrollView } from "react-native-gesture-handler";
 import { Feather } from "@expo/vector-icons";
 import { useRoute } from "@react-navigation/native";
 
@@ -66,7 +65,7 @@ export default function Repositories() {
 
   return (
     <View style={styles.scroll}>
-      <ScrollView style={styles.mainBackground}>
+      <View style={styles.mainBackground}>
         <View style={styles.repBackground}>
           {loading ? (
             <View style={styles.loadingContainer}>
@@ -84,7 +83,7 @@ export default function Repositories() {
             />
           )}
         </View>
-      </ScrollView>
+      </View>
     </View>
   );
 }
