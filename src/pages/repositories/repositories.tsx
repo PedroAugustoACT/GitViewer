@@ -80,6 +80,7 @@ export default function Repositories() {
               data={reps}
               renderItem={renderItem}
               keyExtractor={(item, index) => item.name + index.toString()}
+              showsVerticalScrollIndicator={false}
             />
           )}
         </View>
